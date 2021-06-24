@@ -11,7 +11,6 @@ namespace API.Data
         }
 
         public DbSet<Petitions> Petitions { get; set; }
-
-        
+        public DbSet<AppUser> Users { get; set; }
     }
 }

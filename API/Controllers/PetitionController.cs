@@ -2,15 +2,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Data;
+using API.Dto;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class PetitionController : ControllerBase
+    public class PetitionController : BaseApiController
     {
         private readonly DataContext _context;
         public PetitionController(DataContext context)
@@ -31,5 +30,11 @@ namespace API.Controllers
             return await _context.Petitions.FindAsync(id);
             
         }
+
+        // [HttpPost]
+        // public async Task<ActionResult<PetitonDto>> AddPetition()
+        // {
+            
+        // }
     }
 }
