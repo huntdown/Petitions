@@ -10,7 +10,7 @@ namespace API.Dto
         public string email { get; set; }
 
         [Required]
-        [StringLength(8, MinimumLength = 4)]
+        
         public string Password { get; set; }
         public string City { get; set; }
         public string Country { get; set; }

@@ -1,0 +1,21 @@
+<div class="container mt-5">
+    <div *ngIf="!registerMode" style="text-align: center;">
+        <h1>The best way to predict the future is to create it.</h1>
+        <p class="lead">What kind of issue are you petitoning on? We have a range of topics to choose.All you
+            need to do is sign up!</p>
+        <p class="lead">
+        <button (click)="registerToggle()" class="btn btn-primary btn-lg mr-2">Sign up</button>
+        </p>
+    </div>
+
+    <div *ngIf="registerMode" class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+

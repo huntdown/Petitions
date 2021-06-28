@@ -12,5 +12,6 @@ namespace API.Entities
         public byte[] PasswordSalt { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
+        
     }
 }
